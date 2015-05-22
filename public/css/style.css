@@ -62,3 +62,11 @@ body {
   opacity: 1;
   top: -80px;
 }
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #da2028;
+}
