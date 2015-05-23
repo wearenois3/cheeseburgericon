@@ -24,7 +24,7 @@
 
     <a href="http://www.nois3.it" title="we are nois3 - DIGITAL DESIGN THINKING">
       <figure class="cheeseburger-icon">
-        <span class="tooltip">Hi!<br>I'm a <span class="type"></span> Cheeseburger Icon!</span>
+        <span class="tooltip">Hi!<br>I'm a <span class="type"></span>burger Icon!</span>
       </figure>
     </a>
     <footer>
@@ -42,7 +42,7 @@
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
-      $('.cheeseburger-icon .tooltip .type').text('');
+      $('.cheeseburger-icon .tooltip .type').text('Cheese');
 
       if(window.location.hash == '#veganfriendly') {
         $('body').addClass('veggie');
@@ -51,13 +51,13 @@
 
       $('.veggie').click(function() {
         $('body').addClass('veggie');
-        $('.cheeseburger-icon .tooltip .type').text('soy and tofu');
+        $('.cheeseburger-icon .tooltip .type').text('Tofu');
         window.location.hash = 'veganfriendly';
         return false;
       });
       $('.meat').click(function() {
         $('body').removeClass('veggie');
-        $('.cheeseburger-icon .tooltip .type').text('');
+        $('.cheeseburger-icon .tooltip .type').text('Cheese');
         window.location.hash = '';
         return false;
       });
