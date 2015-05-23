@@ -1,5 +1,4 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
 
 set :application, 'cheeseburgericon.com'
 set :repo_url, 'git@github.com:wearenois3/cheeseburgericon.git'
