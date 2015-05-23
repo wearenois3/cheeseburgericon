@@ -28,7 +28,7 @@
       </figure>
     </a>
     <footer>
-      <h3>Share me on | <a href="#" class="veggie">Go veggie!</a><a href="#" class="meat">Go meat!</a></h3>
+      <h3><a href="#" class="veggie">Go veggie!</a><a href="#" class="meat">Go meat!</a> or share me on</h3>
       <ul>
         <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.cheeseburgericon.com" class="icon-facebook"></a></li>
         <li><a target="_blank" href="https://twitter.com/intent/tweet?via=wearenois3&url=http://www.cheeseburgericon.com&text=I+proudly+support+%23cheeseburgericon+on+the+internet" class="icon-twitter"></a></li>
@@ -44,13 +44,21 @@
       $(document).foundation();
       $('.cheeseburger-icon .tooltip .type').text('');
 
+      if(window.location.hash == '#veganfriendly') {
+        $('body').addClass('veggie');
+        $('.cheeseburger-icon .tooltip .type').text('soy and tofu');
+      }
+
       $('.veggie').click(function() {
         $('body').addClass('veggie');
         $('.cheeseburger-icon .tooltip .type').text('soy and tofu');
+        window.location.hash = 'veganfriendly';
+        return false;
       });
       $('.meat').click(function() {
         $('body').removeClass('veggie');
         $('.cheeseburger-icon .tooltip .type').text('');
+        return false;
       });
     </script>
     <script>
