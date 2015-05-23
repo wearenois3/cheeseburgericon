@@ -1,5 +1,6 @@
 $red: rgb(169,18,63);
-$green: #2eba09;
+$green: #1aaa09;
+$grey: #ccc;
 
 @font-face {
   font-family: 'cheese';
@@ -40,6 +41,11 @@ $green: #2eba09;
 }
 
 body {
+   -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   margin: 0;
   padding: 0;
   outline: 0;
@@ -116,6 +122,7 @@ body {
 
 
   footer {
+
     position: absolute;
     bottom:0;
     width:100%;
@@ -123,6 +130,17 @@ body {
     padding-bottom:20px;
     text-align: center;
     color: white;
+    h3 {
+      a {
+        color: white;
+        &:hover {
+          color: $grey;
+        }
+        &.meat {
+          display: none;
+        }
+      }
+    }
     .centered {
       .icon-heart {
         padding:0 5px;
@@ -147,7 +165,7 @@ body {
           font-size: 30px;
           text-decoration: none;
           &:hover {
-            color: #ccc;
+            color: $grey;
           }
         }
       }
@@ -155,6 +173,12 @@ body {
   }
 
   &.veggie {
+    .meat {
+      display: inline-block;
+    }
+    .veggie {
+      display: none;
+    }
     background: $green;
     a:hover {
       color: $green;

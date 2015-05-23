@@ -29,6 +29,11 @@
   content: "\eab1"; }
 
 body {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   margin: 0;
   padding: 0;
   outline: 0;
@@ -100,6 +105,12 @@ body {
     padding-bottom: 20px;
     text-align: center;
     color: white; }
+    body footer h3 a {
+      color: white; }
+      body footer h3 a:hover {
+        color: #ccc; }
+      body footer h3 a.meat {
+        display: none; }
     body footer .centered .icon-heart {
       padding: 0 5px; }
     body footer .centered a {
@@ -122,6 +133,10 @@ body {
           body footer ul li a:hover {
             color: #ccc; }
   body.veggie {
-    background: #2eba09; }
+    background: #1aaa09; }
+    body.veggie .meat {
+      display: inline-block; }
+    body.veggie .veggie {
+      display: none; }
     body.veggie a:hover {
-      color: #2eba09; }
+      color: #1aaa09; }
